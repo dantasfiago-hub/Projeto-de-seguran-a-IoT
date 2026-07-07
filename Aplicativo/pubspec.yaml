@@ -1,0 +1,52 @@
+name: guardian_iot
+description: "Guardian IoT - Aplicativo de gerenciamento de segurança via ESP32 e MQTT."
+publish_to: 'none'
+
+version: 2.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI / ícones (Material 3 já vem no SDK do Flutter)
+  cupertino_icons: ^1.0.8
+
+  # Estado / gerenciamento de providers
+  provider: ^6.1.2
+
+  # Persistência local simples (chave-valor) usada pelo StorageService
+  shared_preferences: ^2.3.3
+
+  # Cliente MQTT usado para comunicação com o ESP32
+  mqtt_client: ^10.7.0
+
+  # Execução contínua em segundo plano (mantém o MQTT conectado)
+  flutter_background_service: ^5.1.0
+
+  # Notificações locais (alertas críticos de violação)
+  flutter_local_notifications: ^18.0.1
+
+  # Formatação de datas/horas no histórico de eventos
+  intl: ^0.19.0
+
+  # Gráficos da tela de estatísticas
+  fl_chart: ^0.69.2
+
+  # Abrir links externos (ex: repositório do projeto na tela "Sobre")
+  url_launcher: ^6.3.1
+
+  # Recomendado: solicitar permissão de notificação em tempo de execução
+  # (necessário no Android 13+ para que os alertas críticos funcionem)
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.15.0
+
+flutter:
+  uses-material-design: true
